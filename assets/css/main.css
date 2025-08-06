@@ -209,6 +209,11 @@
     figcaption {
       @apply mt-1 text-center;
 
+      /* https://ox-hugo.scripter.co/doc/image-links/#hiding-figure-caption-numbers */
+      .figure-number {
+        display: none;
+      }
+
       h4 {
         @apply mt-0;
       }
