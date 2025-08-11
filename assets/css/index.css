@@ -1433,6 +1433,14 @@ a.taxonomy:hover .count {
       color: rgb(2 132 199 / var(--tw-text-opacity));
     }
   }
+  @media (prefers-color-scheme: dark) {
+    @media not all and (min-width: 1024px) {
+      & ~ .sidenote-content {
+        --tw-text-opacity: 1;
+        color: rgb(125 211 252 / var(--tw-text-opacity));
+      }
+    }
+  }
   & ~ .sidenote-mark {
     text-decoration-line: none;
   }
@@ -1440,6 +1448,14 @@ a.taxonomy:hover .count {
     & ~ .sidenote-mark {
       --tw-text-opacity: 1;
       color: rgb(2 132 199 / var(--tw-text-opacity));
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    @media not all and (min-width: 1024px) {
+      & ~ .sidenote-mark {
+        --tw-text-opacity: 1;
+        color: rgb(125 211 252 / var(--tw-text-opacity));
+      }
     }
   }
 }
@@ -1512,6 +1528,14 @@ a.taxonomy:hover .count {
     text-decoration-style: dotted;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @media not all and (min-width: 1024px) {
+    .sidenote-mark {
+      text-decoration-color: #7dd3fc;
+    }
   }
 }
 

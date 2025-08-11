@@ -381,11 +381,11 @@
 
   .sidenote-checkbox:checked {
     & ~ .sidenote-content {
-      @apply max-lg:not-sr-only max-lg:left-auto max-lg:float-left max-lg:my-2 max-lg:block max-lg:min-w-full max-lg:pl-4 max-lg:text-sky-600;
+      @apply max-lg:not-sr-only max-lg:left-auto max-lg:float-left max-lg:my-2 max-lg:block max-lg:min-w-full max-lg:pl-4 max-lg:text-sky-600 dark:max-lg:text-sky-300;
     }
 
     & ~ .sidenote-mark {
-      @apply no-underline max-lg:text-sky-600;
+      @apply no-underline max-lg:text-sky-600 dark:max-lg:text-sky-300;
     }
   }
 
@@ -405,7 +405,7 @@
       content: counter(sidenote-counter);
     }
 
-    @apply motion-safe:transition-all max-lg:cursor-pointer max-lg:underline max-lg:decoration-sky-600 max-lg:decoration-dotted max-lg:decoration-2 max-lg:underline-offset-4;
+    @apply motion-safe:transition-all max-lg:cursor-pointer max-lg:underline max-lg:decoration-sky-600 dark:max-lg:decoration-sky-300 max-lg:decoration-dotted max-lg:decoration-2 max-lg:underline-offset-4;
   }
 
   .sidenote-content {
