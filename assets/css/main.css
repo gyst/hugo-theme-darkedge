@@ -297,7 +297,7 @@
   }
 
   article.main a {
-    @apply !text-blue-800 dark:!text-blue-300 hover:decoration-2 hover:underline-offset-2;
+    @apply text-blue-800 dark:text-blue-300 hover:decoration-2 hover:underline-offset-2;
   }
 
   article.main .codeblock-meta a {

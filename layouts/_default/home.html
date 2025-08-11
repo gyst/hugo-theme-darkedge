@@ -1,10 +1,21 @@
 {{ define "main" }}
   <article class="main">
-    {{- with .Title }}
       <header>
-        <h1 class="!mb-1">{{ . }}</h1>
+        <h1 class="!mb-1 flex flex-row items-center space-x-2">
+          <span>{{ .Title }}</span>
+          {{- with .OutputFormats.Get "rss" }}
+          <a
+            rel="alternate"
+            type="application/rss+xml"
+            href="{{ .RelPermalink }}"
+            title="Subscribe to the {{ $.Title }} RSS feed"
+            class="text-slate-400 hover:text-orange-600"
+          >
+            {{ partial "svg/rss.html" }}
+          </a>
+          {{- end }}
+        </h1>
       </header>
-    {{ end -}}
     {{- with .Content }}
       {{ . }}
     {{ end -}}
