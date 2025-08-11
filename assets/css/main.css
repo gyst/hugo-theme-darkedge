@@ -175,13 +175,16 @@
 }
 
 @layer base {
+  html {
+    color-scheme: light dark;
+  }
   body {
     font-family: 'LatoLatinWeb', sans-serif;
     counter-reset: sidenote-counter;
   }
 
   nav a:hover {
-    @apply underline decoration-slate-300 decoration-2 underline-offset-4;
+    @apply underline decoration-slate-300 dark:decoration-slate-500 decoration-2 underline-offset-4;
   }
 
   nav a.active,
@@ -194,7 +197,7 @@
   }
 
   article.main a {
-    @apply !text-blue-800 hover:decoration-2 hover:underline-offset-2;
+    @apply !text-blue-800 dark:!text-sky-300 hover:decoration-2 hover:underline-offset-2;
   }
 
   article.main .codeblock-meta a {
@@ -225,11 +228,11 @@
   }
 
   a.taxonomy {
-    @apply whitespace-nowrap rounded-sm border border-slate-200 bg-slate-100 p-1 text-sm font-semibold lowercase no-underline;
+    @apply whitespace-nowrap rounded-sm border border-slate-200 dark:border-slate-600 bg-slate-100 dark:bg-slate-700 p-1 text-sm font-semibold lowercase no-underline;
   }
 
   a.taxonomy:hover {
-    @apply border-slate-300 bg-slate-200;
+    @apply border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-800;
   }
 
   a.taxonomy .count {
