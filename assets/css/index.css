@@ -1109,7 +1109,7 @@ nav, h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: top center;
   background-image: url("/images/logo_narrow_white.svg");
-  background-size: 100%;
+  background-size: contain;
   height: 70px;
 }
 
@@ -1119,7 +1119,7 @@ nav, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   #logo {
     background-image: url("/images/logo_wide_white.svg");
   }
