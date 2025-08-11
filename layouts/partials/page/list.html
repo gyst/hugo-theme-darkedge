@@ -2,7 +2,7 @@
   {{- range .pages }}
     <li>
       <article class="flex flex-row items-center">
-        <header class="grow">
+        <header class="grow truncate">
           <h3>
             <a
               href="{{ .RelPermalink }}"
@@ -15,7 +15,7 @@
         {{- with .Page.GetTerms "categories" }}
           <ul class="flex flex-row items-center justify-end space-x-2">
             {{- range . }}
-              <li>
+              <li class="hidden md:inline-block">
                 <a
                   href="{{ .RelPermalink }}"
                   class="taxonomy"
