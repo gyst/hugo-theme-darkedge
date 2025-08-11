@@ -260,7 +260,7 @@
       background-image: url("/images/logo_narrow_black.svg");
     }
   }
-  @media screen(lg) {
+  @media screen(md) {
     #logo {
       background-image: url("/images/logo_wide_white.svg");
     }
@@ -286,6 +286,10 @@
 
   nav a.ancestor {
     @apply decoration-slate-300 dark:decoration-slate-400;
+  }
+
+  nav ul li:nth-child(3) {
+    @apply max-md:hidden;
   }
 
   main {
