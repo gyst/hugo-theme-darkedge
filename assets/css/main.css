@@ -355,7 +355,7 @@
   }
 
   a.taxonomy .count {
-    @apply relative -top-px rounded bg-slate-300 px-[3px] py-[1px] text-[10px] font-normal tabular-nums text-slate-500;
+    @apply relative -top-px rounded bg-slate-300 px-[3px] py-[1px] text-xs font-normal tabular-nums text-slate-500;
   }
 
   a.taxonomy:hover .count {
