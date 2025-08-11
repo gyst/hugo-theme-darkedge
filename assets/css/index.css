@@ -1126,7 +1126,7 @@ nav a:hover {
 
 @media (prefers-color-scheme: dark) {
   nav a:hover {
-    text-decoration-color: #64748b;
+    text-decoration-color: #94a3b8;
   }
 }
 
@@ -1142,6 +1142,10 @@ nav a.ancestor {
 }
 
 @media (prefers-color-scheme: dark) {
+  nav a.ancestor {
+    text-decoration-color: #94a3b8;
+  }
+
   main {
     --tw-contrast: contrast(2);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1161,7 +1165,7 @@ article.main a:hover {
 @media (prefers-color-scheme: dark) {
   article.main a {
     --tw-text-opacity: 1 !important;
-    color: rgb(125 211 252 / var(--tw-text-opacity)) !important;
+    color: rgb(147 197 253 / var(--tw-text-opacity)) !important;
   }
 }
 
@@ -1207,6 +1211,20 @@ article.main figure {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  article.main figure {
+    img {
+      --tw-border-opacity: 1;
+      border-color: rgb(107 114 128 / var(--tw-border-opacity));
+    }
+  }
+
+  article.main blockquote {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(100 116 139 / var(--tw-border-opacity));
+  }
+}
+
 a.taxonomy {
   white-space: nowrap;
   border-radius: 0.125rem;
@@ -1226,9 +1244,9 @@ a.taxonomy {
 @media (prefers-color-scheme: dark) {
   a.taxonomy {
     --tw-border-opacity: 1;
-    border-color: rgb(100 116 139 / var(--tw-border-opacity));
+    border-color: rgb(113 113 122 / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+    background-color: rgb(113 113 122 / var(--tw-bg-opacity));
   }
 }
 
@@ -1242,7 +1260,7 @@ a.taxonomy:hover {
 @media (prefers-color-scheme: dark) {
   a.taxonomy:hover {
     --tw-border-opacity: 1;
-    border-color: rgb(100 116 139 / var(--tw-border-opacity));
+    border-color: rgb(148 163 184 / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: rgb(100 116 139 / var(--tw-bg-opacity));
   }
@@ -1385,10 +1403,26 @@ a.taxonomy:hover .count {
   color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 
+@media (prefers-color-scheme: dark) {
+  .sidenote:active,
+  .sidenote:active .sidenote-content {
+    --tw-text-opacity: 1;
+    color: rgb(125 211 252 / var(--tw-text-opacity));
+  }
+}
+
 .sidenote:hover .sidenote-mark::after,
   .sidenote:hover .sidenote-content::before {
   --tw-text-opacity: 1;
   color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidenote:hover .sidenote-mark::after,
+  .sidenote:hover .sidenote-content::before {
+    --tw-text-opacity: 1;
+    color: rgb(125 211 252 / var(--tw-text-opacity));
+  }
 }
 
 .sidenote-mark {
