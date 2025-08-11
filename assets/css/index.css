@@ -1250,6 +1250,10 @@ article.main .verse {
   }
 }
 
+article.main .csl-bib-body {
+  padding-bottom: 1.75rem;
+}
+
 a.taxonomy {
   white-space: nowrap;
   border-radius: 0.125rem;
