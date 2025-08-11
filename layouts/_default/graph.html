@@ -10,5 +10,22 @@
     <section class="mt-8">
       {{ partial "graph" ( dict "scaleNodes" true "class" "h-96" ) }}
     </section>
+
+    <section class="mt-8">
+      <h2>Taxonomy</h2>
+      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      <h3>{{ $taxonomyname }}</h3>
+          {{ range $key, $value := $taxonomy }}
+          <h4>{{ $key }}</h4>
+          <ul>
+            {{ range $value.Pages }}
+            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+          <hr />
+          {{ end }}
+      </section>
+
   </article>
 {{ end }}
