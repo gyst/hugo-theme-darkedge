@@ -292,7 +292,7 @@
     @apply max-md:hidden;
   }
 
-  main {
+  main not(img) {
     @apply dark:contrast-200;
   }
 
@@ -339,7 +339,7 @@
   }
 
   article.main .verse {
-    @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-600 py-1 px-10 italic text-xl;
+    @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-800 py-1 px-10 italic text-xl;
   }
 
   article.main .csl-bib-body {
