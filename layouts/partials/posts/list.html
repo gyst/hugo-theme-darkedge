@@ -8,8 +8,10 @@
               <a
                 href="{{ .RelPermalink }}"
                 class="underline decoration-slate-300 dark:decoration-slate-500 decoration-2 underline-offset-4 hover:decoration-inherit"
-                >{{ .Title }}</a
-              >
+              >{{ .Title }}</a>
+              {{ if .Draft }}<sup class="text-white bg-fuchsia-600 m-1 px-1 font-normal">draft</sup>{{ end }}
+              {{- if ge .Date.Unix now.Unix }}<sup class="text-white bg-indigo-600 m-1 px-1 font-normal">future</sup>{{- end }}
+              {{- if in .Params.tags "roamtodo" }}<sup class="text-white bg-pink-600 m-1 px-1 font-normal">todo</sup>{{- end }}
             </h3>
             {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
             {{- $dateHuman := .Date | time.Format (default ":date_long" .Site.Params.dateFormat) -}}

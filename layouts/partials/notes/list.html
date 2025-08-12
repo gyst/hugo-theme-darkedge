@@ -9,8 +9,10 @@
                 href="{{ .RelPermalink }}"
                 class="truncate text-sm underline decoration-slate-300 dark:decoration-slate-500 decoration-2 underline-offset-4 hover:decoration-inherit"
                 title="{{ .Title }}"
-                >{{ .Title }}</a
-              >
+              >{{ .Title }}</a>
+              {{ if .Draft }}<sup class="bg-fuchsia-300 dark:bg-fuchsia-600 m-1 px-1 font-normal">draft</sup>{{ end }}
+              {{- if ge .Date.Unix now.Unix }}<sup class="bg-indigo-300 dark:bg-indigo-600 m-1 px-1 font-normal">future</sup>{{- end }}
+              {{- if in .Params.tags "roamtodo" }}<sup class="bg-rose-300 dark:bg-rose-600 m-1 px-1 font-bold">todo</sup>{{- end }}
             </h3>
           </header>
           {{ with .Page.GetTerms "categories" }}
