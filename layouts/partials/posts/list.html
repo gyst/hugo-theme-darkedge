@@ -20,7 +20,22 @@
             >
           </header>
 
-          <div class="text-sm">{{ .Summary }}</div>
+          <div class="flex flex-row space-x-4">
+            <div class="text-sm flex-grow">{{ .Summary }}</div>
+
+            <div class="flex-none" aria-hidden="true">
+              {{$first_image := ""}}
+              {{$matches := findRESubmatch `<img\s.*?src=(?:'|")([^'">]+)(?:'|")` .Content 1 }}
+              {{range $matches}}{{$first_image = index . 1}}{{end}}
+              {{ if $first_image }}
+              <a href="{{ .RelPermalink }}">
+                <img src="{{ $first_image }}" alt=""
+                     class="object-cover md:w-[150px] md:h-[100px] w-[72px] h-[72px] rounded-sm"/>
+              </a>
+              {{ end }}
+            </div>
+
+          </div>
         </article>
       </li>
     {{- end }}
