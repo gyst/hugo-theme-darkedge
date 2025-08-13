@@ -339,7 +339,7 @@
   }
 
   article.main .verse {
-    @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-800 py-1 px-10 italic text-xl;
+    @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-800 py-1 px-5 lg:px-10 italic lg:text-xl;
   }
 
   article.main .csl-bib-body {

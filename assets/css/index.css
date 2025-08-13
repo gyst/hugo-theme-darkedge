@@ -1260,11 +1260,18 @@ article.main .verse {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   font-style: italic;
+}
+
+@media (min-width: 1024px) {
+  article.main .verse {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
