@@ -23,14 +23,23 @@
 
   {{- if default true site.Params.home.showRecentPosts }}
     {{- $posts := where site.RegularPages "Section" "posts" -}}
-    {{- with $posts.Limit (int (default 3 site.Params.home.recentPostsLimit)) }}
-      <section>
-        <h2>Recent posts</h2>
-
+    {{- with $posts.Limit 1 }}
+      <section class="showcase-first">
         {{ partial "posts/list.html" . }}
       </section>
     {{ end -}}
   {{ end -}}
+
+  {{- if default true site.Params.home.showRecentPosts }}
+    {{- $posts := where site.RegularPages "Section" "posts" -}}
+    {{- with $posts.Limit 4 }}
+      <section class="hide-first">
+        <h2>Other recent posts</h2>
+
+        {{ partial "posts/list.html" . }}
+      </section>
+      {{ end -}}
+      {{ end -}}
 
   {{- if default true site.Params.home.showRecentNotes }}
     {{- $notes := where site.RegularPages "Section" "notes" -}}

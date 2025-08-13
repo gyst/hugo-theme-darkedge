@@ -1177,6 +1177,71 @@ nav a.ancestor {
   }
 }
 
+/* homepage showcase */
+
+section.showcase-first {
+  margin-top: 1.5rem;
+}
+
+section.showcase-first li:first-child article header {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+section.showcase-first li:first-child article header h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  section.showcase-first li:first-child article header h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+section.showcase-first li:first-child article header h3 a {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  section.showcase-first li:first-child article header h3 a {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+section.showcase-first li:first-child article div.flex {
+  flex-wrap: wrap;
+}
+
+section.showcase-first li:first-child article div.flex div {
+  flex: 1 1 100%;
+}
+
+section.showcase-first li:first-child article div.flex img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+section.showcase-first li:first-child article div.flex div.text-sm {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  section.showcase-first li:first-child article div.flex div.text-sm {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+section.hide-first li:first-child {
+  display: none !important;
+}
+
 article.main a {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
@@ -1286,6 +1351,18 @@ article.main .csl-bib-body {
   padding-bottom: 1.75rem;
 }
 
+section.showcase-first li:first-child article div.flex diva.taxonomy {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  section.showcase-first li:first-child article div.flex diva.taxonomy {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 a.taxonomy {
   white-space: nowrap;
   border-radius: 0.125rem;
@@ -1351,6 +1428,32 @@ a.taxonomy:hover .count {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
+section.showcase-first li:first-child article div.pagination {
+  flex-wrap: wrap;
+}
+
+section.showcase-first li:first-child article div.pagination div {
+  flex: 1 1 100%;
+}
+
+section.showcase-first li:first-child article div.pagination img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+section.showcase-first li:first-child article div.pagination div.text-sm {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  section.showcase-first li:first-child article div.pagination div.text-sm {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .pagination {
@@ -1555,6 +1658,39 @@ a.taxonomy:hover .count {
 }
 
 .sidenote-content {
+  section.showcase-first li:first-child article div&::before {
+    flex-wrap: wrap;
+  }
+  section.showcase-first li:first-child article div& div::before {
+    flex: 1 1 100%;
+  }
+  section.showcase-first li:first-child article div& img::before {
+    width: 100%;
+    height: auto;
+  }
+  section.showcase-first li:first-child article div& img::before {
+    border-radius: 0.5rem;
+  }
+  section.showcase-first li:first-child article div& div.text-sm::before {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    section.showcase-first li:first-child article div& div.text-sm::before {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+  section.showcase-first li:first-child article div.flex div&::before {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    section.showcase-first li:first-child article div.flex div&::before {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
   &::before {
     position: absolute;
   }
@@ -1685,6 +1821,18 @@ a.taxonomy:hover .count {
   a {
     --tw-text-opacity: 1 !important;
     color: rgb(127 29 29 / var(--tw-text-opacity)) !important;
+  }
+}
+
+section.showcase-first li:first-child article div.flex div.codeblock pre {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  section.showcase-first li:first-child article div.flex div.codeblock pre {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -2396,6 +2544,10 @@ footer a:hover {
   margin-left: 1.5rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -2556,6 +2708,10 @@ footer a:hover {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
@@ -2808,26 +2964,6 @@ footer a:hover {
 
 .italic {
   font-style: italic;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
-}
-
-.leading-none {
-  line-height: 1;
-}
-
-.leading-3 {
-  line-height: .75rem;
-}
-
-.leading-8 {
-  line-height: 2rem;
-}
-
-.leading-4 {
-  line-height: 1rem;
 }
 
 .leading-6 {

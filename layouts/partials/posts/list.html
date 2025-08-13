@@ -20,21 +20,17 @@
             {{- if in .Params.tags "roamtodo" }}<span class="text-sm text-white bg-pink-600 m-1 px-1 font-normal">todo</span>{{- end }}
           </header>
 
-          <div class="flex flex-row space-x-4">
-            <div class="text-sm flex-grow">{{ .Summary }}</div>
-
+          <div class="flex flex-row gap-4">
             <div class="flex-none" aria-hidden="true">
-              {{$first_image := ""}}
+              {{$first_image := "/images/device_3x2_black.svg"}}
               {{$matches := findRESubmatch `<img\s.*?src=(?:'|")([^'">]+)(?:'|")` .Content 1 }}
               {{range $matches}}{{$first_image = index . 1}}{{end}}
-              {{ if $first_image }}
               <a href="{{ .RelPermalink }}">
                 <img src="{{ $first_image }}" alt=""
-                     class="object-cover md:w-[150px] md:h-[100px] w-[72px] h-[72px] rounded-sm"/>
+                     class="object-cover md:w-[150px] md:h-[100px] w-[72px] h-[72px] rounded-sm mt-1"/>
               </a>
-              {{ end }}
             </div>
-
+            <div class="text-sm flex-grow">{{ .Summary }}</div>
           </div>
         </article>
       </li>
