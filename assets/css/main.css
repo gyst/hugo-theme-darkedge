@@ -350,6 +350,18 @@
     @apply !text-gray-500 transition-colors hover:!text-sky-400;
   }
 
+  section.kit form {
+    max-width: 100% !important;
+  }
+
+  section.kit form div {
+    @apply !p-0;
+  }
+
+  section.kit form input, section.kit form button {
+    font-size: 1rem !important;
+  }
+
   footer a {
     @apply underline hover:decoration-2;
   }

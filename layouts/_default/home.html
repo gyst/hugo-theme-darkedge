@@ -39,16 +39,18 @@
         {{ partial "posts/list.html" . }}
       </section>
       {{ end -}}
-      {{ end -}}
+    {{ end -}}
 
-  {{- if default true site.Params.home.showRecentNotes }}
-    {{- $notes := where site.RegularPages "Section" "notes" -}}
-    {{- with $notes.Limit (int (default 5 site.Params.home.recentNotesLimit)) }}
+    {{- if default true site.Params.home.showRecentNotes }}
+      {{- $notes := where site.RegularPages "Section" "notes" -}}
+      {{- with $notes.Limit (int (default 5 site.Params.home.recentNotesLimit)) }}
       <section>
         <h2>Recent notes</h2>
 
         {{ partial "notes/list.html" . }}
       </section>
+      {{ end -}}
     {{ end -}}
-  {{ end -}}
+
+    {{ partial "kit.html" }}
 {{ end }}

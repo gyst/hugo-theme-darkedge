@@ -32,6 +32,8 @@
     {{ .Content }}
   </article>
 
+  {{ partial "kit.html" }}
+
   {{- if or (eq .Section "posts") (eq .Section "notes") }}
     {{ partial "page/meta" . }}
   {{- end }}

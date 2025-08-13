@@ -1869,6 +1869,18 @@ article.main .diagram-meta a:hover {
   color: rgb(56 189 248 / var(--tw-text-opacity)) !important;
 }
 
+section.kit form {
+  max-width: 100% !important;
+}
+
+section.kit form div {
+  padding: 0px !important;
+}
+
+section.kit form input, section.kit form button {
+  font-size: 1rem !important;
+}
+
 footer a {
   text-decoration-line: underline;
 }
@@ -2536,12 +2548,24 @@ footer a:hover {
   margin-bottom: 5rem !important;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
 .ml-6 {
   margin-left: 1.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .mt-1 {
@@ -2554,6 +2578,10 @@ footer a:hover {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-8 {
@@ -2930,6 +2958,11 @@ footer a:hover {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2948,6 +2981,11 @@ footer a:hover {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
