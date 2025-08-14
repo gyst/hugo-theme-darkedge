@@ -13,8 +13,7 @@
             {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
             {{- $dateHuman := .Date | time.Format (default ":date_long" .Site.Params.dateFormat) -}}
             <time class="text-sm italic opacity-80" datetime="{{ $dateMachine }}"
-            >{{ $dateHuman }}</time
-                             >
+            >{{ $dateHuman }}</time>
             {{ if .Draft }}<span class="text-sm text-white bg-fuchsia-600 m-1 px-1 font-normal">draft</span>{{ end }}
             {{- if ge .Date.Unix now.Unix }}<span class="text-sm text-white bg-indigo-600 m-1 px-1 font-normal">future</span>{{- end }}
             {{- if in .Params.tags "roamtodo" }}<span class="text-sm text-white bg-pink-600 m-1 px-1 font-normal">todo</span>{{- end }}
@@ -30,7 +29,11 @@
                      class="object-cover md:w-[150px] md:h-[100px] w-[72px] h-[72px] rounded-sm mt-1"/>
               </a>
             </div>
-            <div class="text-sm flex-grow">{{ .Summary }}</div>
+            <div class="text-sm flex-grow">
+
+              {{ .Summary }}
+
+            </div>
           </div>
         </article>
       </li>
