@@ -1870,15 +1870,15 @@ article.main .diagram-meta a:hover {
   color: rgb(56 189 248 / var(--tw-text-opacity)) !important;
 }
 
-section.kit form {
+.kit form {
   max-width: 100% !important;
 }
 
-section.kit form div {
+.kit form div {
   padding: 0px !important;
 }
 
-section.kit form input, section.kit form button {
+.kit form input, section.kit form button {
   font-size: 1rem !important;
 }
 
