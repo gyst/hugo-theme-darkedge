@@ -1318,6 +1318,51 @@ article.main figure {
   }
 }
 
+blockquote:has(+ p > cite),
+  blockquote:has(+ p > cite) > p:last-child {
+  margin-bottom: 0px !important;
+}
+
+blockquote + p:has(cite) {
+  margin-top: 0px !important;
+  padding-top: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  blockquote + p:has(cite) {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(100 116 139 / var(--tw-border-opacity));
+  }
+}
+
+blockquote + p:has(cite) {
+  border-inline-start-width: 0.25rem;
+  padding-inline-start: 1em;
+}
+
+blockquote + p > cite {
+  border-top-width: 1px;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  blockquote + p > cite {
+    --tw-border-opacity: 1;
+    border-color: rgb(71 85 105 / var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225 / var(--tw-text-opacity));
+  }
+}
+
+blockquote + p > cite:before {
+  content: "→";
+  margin-right: 0.5em;
+}
+
 article.main .verse {
   border-radius: 0.5rem;
   border-width: 1px;
