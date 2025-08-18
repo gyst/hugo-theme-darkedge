@@ -12,8 +12,9 @@
         >{{ $dateHuman }}</time>
         {{- end }}
 
-        {{ partial "readingtime.html" (dict "Page" .) }}
-        </div>
+        {{- partial "readingtime.html" (dict "Page" .) -}}
+        {{- partial "status.html" (dict "Page" .) -}}
+      </div>
 
       {{- with $imgResources.GetMatch "{*feature*,*cover*}" }}
         <figure class="feature-image !mb-20 block text-center">

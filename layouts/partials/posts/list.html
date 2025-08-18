@@ -14,9 +14,7 @@
             {{- $dateHuman := .Date | time.Format (default ":date_long" .Site.Params.dateFormat) -}}
             <time class="text-sm italic opacity-80" datetime="{{ $dateMachine }}"
             >{{ $dateHuman }}</time>
-            {{ if .Draft }}<span class="text-sm text-white bg-fuchsia-600 m-1 px-1 font-normal">draft</span>{{ end }}
-            {{- if ge .Date.Unix now.Unix }}<span class="text-sm text-white bg-indigo-600 m-1 px-1 font-normal">future</span>{{- end }}
-            {{- if in .Params.tags "roamtodo" }}<span class="text-sm text-white bg-pink-600 m-1 px-1 font-normal">todo</span>{{- end }}
+            {{- partial "status.html" (dict "Page" .) -}}
           </header>
 
           <div class="flex flex-row gap-4">
