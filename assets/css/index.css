@@ -1321,6 +1321,7 @@ article.main figure {
 blockquote:has(+ p > cite),
   blockquote:has(+ p > cite) > p:last-child {
   margin-bottom: 0px !important;
+  padding-bottom: 0.5rem !important;
 }
 
 blockquote + p:has(cite) {
@@ -1335,13 +1336,15 @@ blockquote + p:has(cite) {
   }
 }
 
-blockquote + p:has(cite) {
+blockquote + p:has(cite)  {
   border-inline-start-width: 0.25rem;
   padding-inline-start: 1em;
 }
 
 blockquote + p > cite {
   border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
   padding-top: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1358,7 +1361,19 @@ blockquote + p > cite {
   }
 }
 
-blockquote + p > cite:before {
+blockquote + p > cite:before, div.verse + p > cite:before {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  blockquote + p > cite:before, div.verse + p > cite:before {
+    --tw-text-opacity: 1;
+    color: rgb(100 116 139 / var(--tw-text-opacity));
+  }
+}
+
+blockquote + p > cite:before, div.verse + p > cite:before {
   content: "→";
   margin-right: 0.5em;
 }
