@@ -30,7 +30,7 @@
                 {{ if eq $page.Section "notes" }}{{ $count = add $count 1 }}{{ end }}
               {{- end }}
               {{- if gt $count 0 }}
-                <li class="first:ml-2">
+                <li class="first:ml-2 my-1">
                   <a href="{{ $taxonomy.Page.RelPermalink }}" class="taxonomy">
                     <span>{{ $name }}</span>
                     <span class="count">{{ $count }}</span>
