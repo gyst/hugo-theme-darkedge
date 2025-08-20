@@ -2632,6 +2632,11 @@ footer a:hover {
   margin-bottom: 0.25rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .\!mb-1 {
   margin-bottom: 0.25rem !important;
 }
@@ -3095,6 +3100,16 @@ footer a:hover {
   line-height: 1rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -3339,6 +3354,18 @@ footer a:hover {
 }
 
 @media (min-width: 768px) {
+  section.showcase-first li:first-child article div.flex div.md\:text-sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    section.showcase-first li:first-child article div.flex div.md\:text-sm {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
   .md\:prose-lg {
     font-size: 1.125rem;
     line-height: 1.7777778;
@@ -3689,6 +3716,21 @@ footer a:hover {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
