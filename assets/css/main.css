@@ -227,8 +227,19 @@
     @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-800 py-1 px-5 lg:px-10 italic lg:text-xl;
   }
 
-  article.main aside {
+
+  article.main aside:not(.kit) {
     @apply border rounded-md border-slate-400 dark:border-slate-500 bg-slate-100 dark:bg-slate-800 py-1 px-5;
+  }
+
+  /* kit shortcode in text */
+  article.main aside.kit {
+    @apply border-b;
+  }
+
+  /* kit partial near footer*/
+  #maincontent > aside.kit {
+    @apply !mt-20;
   }
 
   article.main .csl-bib-body {

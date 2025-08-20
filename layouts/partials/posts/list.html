@@ -10,11 +10,30 @@
                 class="underline decoration-slate-300 dark:decoration-slate-500 decoration-2 underline-offset-4 hover:decoration-inherit"
               >{{ .Title }}</a>
             </h3>
+            <div>
             {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
             {{- $dateHuman := .Date | time.Format (default ":date_long" .Site.Params.dateFormat) -}}
             <time class="text-sm italic opacity-80" datetime="{{ $dateMachine }}"
             >{{ $dateHuman }}</time>
             {{- partial "status.html" (dict "Page" .) -}}
+
+          {{ with .Page.GetTerms "categories" | first 2 }}
+            <ul class="flex flex-row items-center justify-end space-x-2 ml-4 max-w-1/4">
+              {{ range . }}
+                <li class="hidden md:inline-block">
+                  <a
+                    href="{{ .RelPermalink }}"
+                    class="taxonomy"
+                    title="See notes on {{ .LinkTitle }}"
+                  >{{ .LinkTitle }}</a
+                                   >
+                </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+
+            </div>
+
           </header>
 
           <div class="flex flex-row gap-4">
