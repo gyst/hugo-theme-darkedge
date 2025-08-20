@@ -34,7 +34,7 @@
     {{- $posts := where site.RegularPages "Section" "posts" -}}
     {{- with $posts.Limit 4 }}
       <section class="hide-first">
-        <h2>Other recent posts</h2>
+        <h2><a href="/posts/" class="no-underline hover:underline">Other recent posts</a></h2>
 
         {{ partial "posts/list.html" . }}
       </section>
@@ -45,7 +45,7 @@
       {{- $notes := where site.RegularPages "Section" "notes" -}}
       {{- with $notes.Limit (int (default 5 site.Params.home.recentNotesLimit)) }}
       <section>
-        <h2>Recent notes</h2>
+        <h2><a href="/notes/" class="no-underline hover:underline">Recent notes</a></h2>
 
         {{ partial "notes/list.html" . }}
       </section>
