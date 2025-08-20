@@ -11,12 +11,12 @@
       {{ partial "graph" ( dict "scaleNodes" true "class" "h-96" ) }}
     </section>
 
-    <section class="mt-8">
-      <h2>Taxonomy</h2>
+    <section class="mt-20 pt-8">
+      <h1>Taxonomy</h1>
       {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-      <h3>{{ $taxonomyname }}</h3>
+      <h2 class="capitalize">{{ $taxonomyname }}</h2>
           {{ range $key, $value := $taxonomy }}
-          <h4>{{ $key }}</h4>
+          <h3 class="text-lg">{{ $key }}</h3>
           <ul>
             {{ range $value.Pages }}
             <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
