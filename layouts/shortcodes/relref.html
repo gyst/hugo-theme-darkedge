@@ -9,4 +9,4 @@
 {{- else -}}
     {{- $.Page.Scratch.Set "outgoing" ( slice $target.Page ) -}}
 {{- end -}}
-{{ relref . .Params }}
+{{ relref . $target.Page.File.Path }}
