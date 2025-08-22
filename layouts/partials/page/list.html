@@ -12,8 +12,8 @@
             >
           </h3>
         </header>
-        {{- with .Page.GetTerms "categories" }}
-          <ul class="flex flex-row items-center justify-end space-x-2">
+        {{- with .Page.GetTerms "categories" | first 2 }}
+          <ul class="flex flex-row items-center justify-end space-x-2 ml-4 max-2-1/4">
             {{- range . }}
               <li class="hidden md:inline-block">
                 <a
