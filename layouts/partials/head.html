@@ -29,9 +29,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="manifest" href="/images/site.webmanifest">
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/schema.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+{{ template "partials/opengraph.html" . }}
+{{ template "partials/schema.html" . }}
+{{ template "partials/twitter_cards.html" . }}
 <link rel="canonical" href="{{ .Permalink }}" />
 {{- range .AlternativeOutputFormats -}}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" />
