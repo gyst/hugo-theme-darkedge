@@ -156,6 +156,10 @@
   section.hide-first li:first-child {
     display: none !important;
   }
+  section.showcase-first a.taxonomy,
+  section.hide-first a.taxonomy {
+    display: none !important;
+  }
 
   article.main h1 {
     @apply leading-[3rem];
