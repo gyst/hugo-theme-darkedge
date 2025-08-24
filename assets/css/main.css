@@ -164,6 +164,9 @@
   article.main a {
     @apply text-blue-800 dark:text-blue-300 hover:decoration-2 hover:underline-offset-2;
   }
+  article.main h3 > a {
+    @apply text-black dark:text-white no-underline hover:underline;
+  }
 
   article.main .codeblock-meta a {
     @apply !text-white/70 hover:!text-sky-400;

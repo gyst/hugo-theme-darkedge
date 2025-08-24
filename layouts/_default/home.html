@@ -8,7 +8,7 @@
             rel="alternate"
             type="application/rss+xml"
             href="{{ .RelPermalink }}"
-            title="Subscribe to the {{ $.Title }} RSS feed"
+            title="Subscribe to the {{ $.Title }} RSS feed of everything"
             class="text-slate-400 hover:text-orange-600"
           >
             {{ partial "svg/rss.html" }}
@@ -34,7 +34,20 @@
     {{- $posts := where site.RegularPages "Section" "posts" -}}
     {{- with $posts.Limit 4 }}
       <section class="hide-first">
-        <h2><a href="/posts/" class="no-underline hover:underline">Other recent posts</a></h2>
+        <h2 class="flex flex-row space-x-2 items-center">
+          <a href="/posts/" class="no-underline hover:underline">Other recent posts</a>
+          {{- with $.OutputFormats.Get "rss" -}}
+          <a
+            rel="alternate"
+            type="application/rss+xml"
+            href="/posts{{ .RelPermalink }}"
+            title="Subscribe to the {{ $.Title }} RSS feed of only posts"
+            class="text-slate-300 hover:text-orange-600"
+          >
+            {{ partial "svg/rss.html" }}
+          </a>
+          {{- end }}
+        </h2>
 
         {{ partial "posts/list.html" . }}
       </section>

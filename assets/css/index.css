@@ -1262,6 +1262,23 @@ article.main a:hover {
   }
 }
 
+article.main h3 > a {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  text-decoration-line: none;
+}
+
+article.main h3 > a:hover {
+  text-decoration-line: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  article.main h3 > a {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
 article.main .codeblock-meta a {
   color: rgb(255 255 255 / 0.7) !important;
 }
@@ -3687,12 +3704,6 @@ footer a:hover {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:ml-4 {
-    margin-left: 1rem;
   }
 }
 
