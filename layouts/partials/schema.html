@@ -19,9 +19,9 @@
   <meta itemprop="wordCount" content="{{ . }}">
 {{- end }}
 
-{{- $images := partial "_funcs/get-page-images" . }}
-{{- range first 6 $images }}
-  <meta itemprop="image" content="{{ .Permalink }}">
+{{- $images := findRESubmatch `<img\s.*?src=(?:'|")([^'">]+)(?:'|")` .Content 6 }}
+{{- range $images }}
+<meta itemprop="image" content="{{ index . 1 }}">
 {{- end }}
 
 {{- /*
@@ -29,7 +29,7 @@ Keywords precedence:
 
 1. Use "keywords" term page titles.
 2. Use "keywords" from front matter if "keywords" is not a taxonomy.
-3. Use "tags" term page titles.
+DISABLED: 3. Use "tags" term page titles.
 4. Use term page titles from all taxonomies.
 
 */}}
@@ -40,14 +40,10 @@ Keywords precedence:
   {{- with .Keywords }}
     {{- $keywords = . }}
   {{- else }}
-    {{- range .GetTerms "tags" }}
-      {{- $keywords = $keywords | append .Title }}
-    {{- else }}
       {{- range $taxonomy, $_ := site.Taxonomies }}
         {{- range $.GetTerms $taxonomy }}
           {{- $keywords = $keywords | append .Title }}
         {{- end }}
-      {{- end }}
     {{- end }}
   {{- end }}
 {{- end }}
