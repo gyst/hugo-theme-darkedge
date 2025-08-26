@@ -58,6 +58,11 @@
 				<category>{{ . }}</category>
 			  {{ end }}
 		  {{ end }}
+      {{ if .Params.Tags }}
+			  {{ range .Params.Tags }}
+				<category>{{ . }}</category>
+			  {{ end }}
+      {{ end }}
       <description>{{ .Content | transform.XMLEscape | safeHTML }}</description>
     </item>
     {{- end }}
