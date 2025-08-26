@@ -1,6 +1,6 @@
 {{ define "main" }}
   <h1 class="flex flex-row items-center space-x-2">
-    <span>{{ .Title }}</span>
+    <span>{{ .Title | humanize }}</span>
     {{- with .OutputFormats.Get "rss" }}
       <a
         rel="alternate"
