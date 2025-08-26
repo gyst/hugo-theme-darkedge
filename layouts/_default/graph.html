@@ -16,7 +16,7 @@
       {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
       <h2 class="capitalize">{{ $taxonomyname }}</h2>
           {{ range $key, $value := $taxonomy }}
-          <h3 class="text-lg"><a href="/{{ $taxonomyname }}/{{ $key }}">{{ $key }}</a></h3>
+          <h3 class="text-lg"><a href="/{{ $taxonomyname }}/{{ $key | urlize }}">{{ $key }}</a></h3>
           <ul>
             {{ range $value.Pages }}
             <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
