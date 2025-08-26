@@ -22,7 +22,7 @@
 
     {{- range $pager.PageGroups }}
       <section class="not-prose flex flex-col space-y-4">
-        <h2 class="text-xl font-semibold opacity-60 text-right border-b">{{ .Key }}</h2>
+        <h2 class="text-xl font-semibold opacity-60 text-right border-b mb-4">{{ .Key }}</h2>
 
         {{ partial "posts/list.html" .Pages }}
       </section>

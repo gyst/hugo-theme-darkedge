@@ -1,39 +1,25 @@
 <div class="not-prose">
   <ol>
     {{- range . }}
-      <li class="mb-6">
+      <li class="mb-8">
         <article class="flex flex-col space-y-1">
-          <header>
-            <h3 class="text-lg font-semibold leading-6">
-              <a
-                href="{{ .RelPermalink }}"
-                class="underline decoration-slate-300 dark:decoration-slate-500 decoration-2 underline-offset-4 hover:decoration-inherit"
-              >{{ .Title }}</a>
+          <header class="flex flex-col">
+            <div class="flex flex-row">
+              <h3 class="grow truncate mt-1">
+                <a
+                  href="{{ .RelPermalink }}"
+                  class=" text-lg font-semibold leading-6 underline decoration-slate-300 dark:decoration-slate-500 decoration-2 underline-offset-4 hover:decoration-inherit"
+                >{{ .Title }}</a>
             </h3>
-            <div>
+            {{- partial "list-categories.html" (dict "Page" .) -}}
+            </div>
+            <div class="flex flex-row">
             {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
             {{- $dateHuman := .Date | time.Format (default ":date_long" .Site.Params.dateFormat) -}}
             <time class="text-sm italic opacity-80" datetime="{{ $dateMachine }}"
             >{{ $dateHuman }}</time>
             {{- partial "status.html" (dict "Page" .) -}}
-
-          {{ with .Page.GetTerms "categories" | first 2 }}
-            <ul class="flex flex-row items-center justify-end space-x-2 ml-4 max-w-1/4">
-              {{ range . }}
-                <li class="hidden md:inline-block">
-                  <a
-                    href="{{ .RelPermalink }}"
-                    class="taxonomy"
-                    title="See notes on {{ .LinkTitle }}"
-                  >{{ .LinkTitle }}</a
-                                   >
-                </li>
-                {{ end }}
-            </ul>
-            {{ end }}
-
             </div>
-
           </header>
 
           <div class="flex flex-row gap-4">

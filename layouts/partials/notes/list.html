@@ -13,20 +13,7 @@
               {{- partial "status.html" (dict "Page" . ) -}}
             </h3>
           </header>
-          {{ with .Page.GetTerms "categories" | first 2 }}
-            <ul class="flex flex-row items-center justify-end space-x-2 ml-4 max-w-1/4">
-              {{ range . }}
-                <li class="hidden md:inline-block">
-                  <a
-                    href="{{ .RelPermalink }}"
-                    class="taxonomy"
-                    title="See notes on {{ .LinkTitle }}"
-                    >{{ .LinkTitle }}</a
-                  >
-                </li>
-              {{ end }}
-            </ul>
-          {{ end }}
+          {{- partial "list-categories.html" (dict "Page" .) -}}
         </article>
       </li>
     {{ end -}}
