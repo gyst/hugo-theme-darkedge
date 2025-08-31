@@ -1222,6 +1222,7 @@ section.showcase-first li:first-child article div.flex div {
 section.showcase-first li:first-child article div.flex img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1.5;
   border-radius: 0.5rem;
 }
 
@@ -1432,6 +1433,23 @@ article.main .verse {
   }
 }
 
+section.showcase-first li:first-child article div.flex divarticle.main div.footnotes li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  section.showcase-first li:first-child article div.flex divarticle.main div.footnotes li {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+article.main div.footnotes li {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 article.main aside:not(.kit) {
   border-radius: 0.375rem;
   border-width: 1px;
@@ -1562,6 +1580,7 @@ section.showcase-first li:first-child article div.pagination div {
 section.showcase-first li:first-child article div.pagination img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1.5;
   border-radius: 0.5rem;
 }
 
@@ -1788,6 +1807,7 @@ section.showcase-first li:first-child article div.pagination div.text-sm {
   section.showcase-first li:first-child article div& img::before {
     width: 100%;
     height: auto;
+    aspect-ratio: 1.5;
   }
   section.showcase-first li:first-child article div& img::before {
     border-radius: 0.5rem;
@@ -2695,6 +2715,10 @@ footer a:hover {
   margin-bottom: 1.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -2721,18 +2745,6 @@ footer a:hover {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-0 {
-  margin-bottom: 0px;
 }
 
 .block {
@@ -2947,12 +2959,6 @@ footer a:hover {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 
 .truncate {

@@ -148,6 +148,7 @@
   section.showcase-first li:first-child article div.flex img {
     width: 100%;
     height: auto;
+    aspect-ratio: 1.5;
     @apply rounded-lg;
   }
   section.showcase-first li:first-child article div.flex div.text-sm {
@@ -234,6 +235,9 @@
     @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-800 py-1 px-5 lg:px-10 italic lg:text-xl;
   }
 
+  article.main div.footnotes li {
+    @apply text-sm;
+  }
 
   article.main aside:not(.kit) {
     @apply border rounded-md border-slate-400 dark:border-slate-500 bg-slate-100 dark:bg-slate-800 py-1 px-5;
