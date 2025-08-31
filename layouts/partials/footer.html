@@ -4,7 +4,7 @@
 <section class="items-top flex flex-row justify-between opacity-70">
   <div class="flex flex-col space-y-2">
     {{- if $showCopyright }}
-      <p>Copyright &copy; {{ now.Year }}, {{ default "all rights reserved" site.Copyright }}.</p>
+    <p>Copyright &copy; {{ now.Year }}, <a rel="me" href="https://kolektiva.social/@guidostevens">Guido Stevens</a>.</p>
     {{- end }}
 
     {{- with $licenseData }}
@@ -38,8 +38,10 @@
   </div>
 
   <div>
+    <p>
     Subscribe via <a href="/index.xml" title="Subscribe to the Dark Edge RSS feed of everything">RSS</a>
     or <a href="https://darkedge.kit.com/44bc387217" title="Subscribe to the Dark Edge email newsletter">email</a>.
+    </p>
   </div>
 
   {{- if default true site.Params.footer.showThemeCredit }}
