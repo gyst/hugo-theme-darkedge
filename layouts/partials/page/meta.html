@@ -4,15 +4,15 @@
 {{- $incomingNotes := slice -}}
 {{- $outgoingNotes := slice -}}
 {{- with .Scratch.Get "incoming" -}}
-  {{- $incomingPosts = where . "Section" "posts" | uniq -}}
-  {{- $incomingNotes = where . "Section" "notes" | uniq -}}
+{{- $incomingPosts = where . "Section" "posts" | uniq -}}
+{{- $incomingNotes = where . "Section" "notes" | uniq -}}
 {{- end -}}
 {{- with .Scratch.Get "outgoing" -}}
-  {{- $outgoingNotes = where . "Section" "notes" | uniq -}}
-  {{- $outgoingPosts = where . "Section" "posts" | uniq -}}
+{{- $outgoingNotes = where . "Section" "notes" | uniq -}}
+{{- $outgoingPosts = where . "Section" "posts" | uniq -}}
 {{- end -}}
-{{- $relatedPosts := where (.Site.RegularPages.Related .) "Section" "posts" | uniq | first 5 -}}
-{{- $relatedNotes := where (.Site.RegularPages.Related .) "Section" "notes" | uniq | first 5 -}}
+{{- $relatedPosts := where (.Site.RegularPages.Related .) "Section" "posts" | uniq | complement $incomingPosts $outgoingPosts | first 5 -}}
+{{- $relatedNotes := where (.Site.RegularPages.Related .) "Section" "notes" | uniq | complement $incomingNotes $outgoingNotes | first 5 -}}
 {{- $postsCount := add ( len $incomingPosts ) ( len $outgoingPosts ) ( len $relatedPosts ) -}}
 {{- $notesCount := add ( len $incomingNotes ) ( len $outgoingNotes ) ( len $relatedNotes ) -}}
 <aside class="not-prose flex flex-col space-y-8 border-t border-neutral-500 pt-6">
