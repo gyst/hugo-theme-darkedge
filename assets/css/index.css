@@ -1384,6 +1384,10 @@ blockquote + p > cite {
   }
 }
 
+blockquote + p > cite {
+  display: block;
+}
+
 blockquote + p > cite:before, div.verse + p > cite:before {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
@@ -1399,6 +1403,11 @@ blockquote + p > cite:before, div.verse + p > cite:before {
 blockquote + p > cite:before, div.verse + p > cite:before {
   content: "→";
   margin-right: 0.5em;
+}
+
+article.main h5 {
+  font-weight: 700;
+  text-decoration-line: underline;
 }
 
 article.main .verse {
