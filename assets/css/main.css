@@ -162,43 +162,91 @@
     display: none !important;
   }
 
-  article.main h1 {
-    @apply leading-[3rem];
-  }
+  /* detail view only */
+  article.main {
+      h1 {
+          @apply leading-[3rem];
+      }
 
-  article.main a {
-    @apply text-blue-800 dark:text-blue-300 hover:decoration-2 hover:underline-offset-2;
-  }
-  article.main h3 > a {
-    @apply text-black dark:text-white no-underline hover:underline;
-  }
-
-  article.main .codeblock-meta a {
-    @apply !text-white/70 hover:!text-sky-400;
-  }
-
-  article.main figure {
-    img {
-      @apply mb-0 border p-1;
-    }
-
-    figcaption {
-      @apply mt-1 text-center;
-
-      /* https://ox-hugo.scripter.co/doc/image-links/#hiding-figure-caption-numbers */
-      .figure-number {
-        display: none;
+      h3 {
+          @apply text-3xl;
       }
 
       h4 {
-        @apply mt-0;
+          @apply text-2xl;
       }
 
-      p {
-        @apply mt-1 italic;
+      h5 {
+          @apply text-xl font-bold uppercase tracking-wider;
       }
-    }
-  }
+
+      a {
+          @apply text-blue-800 dark:text-blue-300 hover:decoration-2 hover:underline-offset-2;
+      }
+      
+      h3 > a {
+          @apply text-black dark:text-white no-underline hover:underline;
+      }
+
+      .codeblock-meta a {
+          @apply !text-white/70 hover:!text-sky-400;
+      }
+
+      figure {
+          img {
+              @apply mb-0 border p-1;
+          }
+
+          figcaption {
+              @apply mt-1 text-center;
+
+              /* https://ox-hugo.scripter.co/doc/image-links/#hiding-figure-caption-numbers */
+              .figure-number {
+                  display: none;
+              }
+
+              h4 {
+                  @apply mt-0;
+              }
+
+              p {
+                  @apply mt-1 italic;
+              }
+          }
+      }
+
+      blockquote > p {
+          @apply font-light not-italic;
+      }
+
+      blockquote:has(+ p > cite),
+      blockquote:has(+ p > cite) > p:last-child {
+          @apply !mb-0 !pb-2;
+      }
+
+      blockquote + p:has(cite)  {
+          @apply dark:border-l-slate-500 !mt-0 pt-2;
+          border-inline-start-width: 0.25rem;
+          padding-inline-start: 1em;
+      }
+
+      blockquote + p > cite {
+          @apply text-base text-slate-700 dark:text-slate-300 border-t border-slate-300 dark:border-slate-600 pt-2;
+          display: block;
+      }
+
+      blockquote + p > cite:before, div.verse + p > cite:before {
+          @apply text-slate-400 dark:text-slate-500;
+          content: "→";
+          margin-right: 0.5em;
+      }
+
+      .verse {
+          @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-800 py-1 px-5 lg:px-10 italic lg:text-xl;
+      }
+
+      
+  } /* /article.main */
 
   @media (prefers-color-scheme: dark) {
     article.main figure {
@@ -209,34 +257,6 @@
     article.main blockquote {
       @apply border-l-slate-500;
     }
-  }
-
-  blockquote:has(+ p > cite),
-  blockquote:has(+ p > cite) > p:last-child {
-    @apply !mb-0 !pb-2;
-  }
-
-  blockquote + p:has(cite)  {
-    @apply dark:border-l-slate-500 !mt-0 pt-2;
-    border-inline-start-width: 0.25rem;
-    padding-inline-start: 1em;
-  }
-
-  blockquote + p > cite {
-    @apply text-base text-slate-700 dark:text-slate-300 border-t border-slate-300 dark:border-slate-600 pt-2;
-    display: block;
-  }
-  blockquote + p > cite:before, div.verse + p > cite:before {
-    @apply text-slate-400 dark:text-slate-500;
-    content: "→";
-    margin-right: 0.5em;
-  }
-
-  article.main h5 {
-      @apply underline font-bold;
-  }
-  article.main .verse {
-    @apply border rounded-lg border-slate-200 dark:border-slate-500 bg-slate-200 dark:bg-slate-800 py-1 px-5 lg:px-10 italic lg:text-xl;
   }
 
   article.main div.footnotes li {
