@@ -1358,6 +1358,42 @@ article.main {
   blockquote > p {
     font-style: normal;
   }
+  blockquote > p {
+    &:before {
+      padding-right: 0.25rem;
+    }
+    &:before {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+    &:before {
+      --tw-text-opacity: 1;
+      color: rgb(148 163 184 / var(--tw-text-opacity));
+    }
+    @media (prefers-color-scheme: dark) {
+      &:before {
+        --tw-text-opacity: 1;
+        color: rgb(148 163 184 / var(--tw-text-opacity));
+      }
+    }
+    &:after {
+      padding-left: 0.25rem;
+    }
+    &:after {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+    &:after {
+      --tw-text-opacity: 1;
+      color: rgb(148 163 184 / var(--tw-text-opacity));
+    }
+    @media (prefers-color-scheme: dark) {
+      &:after {
+        --tw-text-opacity: 1;
+        color: rgb(148 163 184 / var(--tw-text-opacity));
+      }
+    }
+  }
   blockquote:has(+ p > cite),
       blockquote:has(+ p > cite) > p:last-child {
     margin-bottom: 0px !important;
@@ -1415,17 +1451,20 @@ article.main {
   blockquote + p > cite {
     display: block;
   }
-  blockquote + p > cite:before, div.verse + p > cite:before {
+  blockquote + p > cite:before,
+      div.verse + p > cite:before {
     --tw-text-opacity: 1;
     color: rgb(148 163 184 / var(--tw-text-opacity));
   }
   @media (prefers-color-scheme: dark) {
-    blockquote + p > cite:before, div.verse + p > cite:before {
+    blockquote + p > cite:before,
+      div.verse + p > cite:before {
       --tw-text-opacity: 1;
       color: rgb(100 116 139 / var(--tw-text-opacity));
     }
   }
-  blockquote + p > cite:before, div.verse + p > cite:before {
+  blockquote + p > cite:before,
+      div.verse + p > cite:before {
     content: "→";
     margin-right: 0.5em;
   }

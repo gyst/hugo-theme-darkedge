@@ -221,7 +221,16 @@
 
       blockquote > p {
           @apply font-light not-italic;
+
+          &:before {
+              @apply text-3xl text-slate-400 dark:text-slate-400 pr-1;    
+          }
+
+          &:after {
+              @apply text-3xl text-slate-400 dark:text-slate-400 pl-1;
+          }
       }
+
 
       blockquote:has(+ p > cite),
       blockquote:has(+ p > cite) > p:last-child {
@@ -239,7 +248,8 @@
           display: block;
       }
 
-      blockquote + p > cite:before, div.verse + p > cite:before {
+      blockquote + p > cite:before,
+      div.verse + p > cite:before {
           @apply text-slate-400 dark:text-slate-500;
           content: "→";
           margin-right: 0.5em;
