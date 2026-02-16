@@ -1306,6 +1306,13 @@ article.main {
       color: rgb(255 255 255 / var(--tw-text-opacity));
     }
   }
+  div.toc > div.heading {
+    margin-top: 2rem;
+  }
+  div.toc > div.heading {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
   .codeblock-meta a {
     color: rgb(255 255 255 / 0.7) !important;
   }

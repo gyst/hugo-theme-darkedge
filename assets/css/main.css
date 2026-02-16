@@ -188,6 +188,10 @@
           @apply text-black dark:text-white no-underline hover:underline;
       }
 
+      div.toc > div.heading {
+          @apply text-xl mt-8;
+      }
+
       .codeblock-meta a {
           @apply !text-white/70 hover:!text-sky-400;
       }
