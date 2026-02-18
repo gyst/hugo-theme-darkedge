@@ -220,14 +220,13 @@
       }
 
       blockquote > p {
-          @apply font-light not-italic;
 
           &:before {
-              @apply text-3xl text-slate-400 dark:text-slate-400 pr-1;    
+              @apply text-slate-400 dark:text-slate-400 pr-1 m-0;    
           }
 
           &:after {
-              @apply text-3xl text-slate-400 dark:text-slate-400 pl-1;
+              @apply text-slate-400 dark:text-slate-400 pl-1;
           }
       }
 

@@ -1353,18 +1353,11 @@ article.main {
     }
   }
   blockquote > p {
-    font-weight: 300;
-  }
-  blockquote > p {
-    font-style: normal;
-  }
-  blockquote > p {
     &:before {
-      padding-right: 0.25rem;
+      margin: 0px;
     }
     &:before {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
+      padding-right: 0.25rem;
     }
     &:before {
       --tw-text-opacity: 1;
@@ -1378,10 +1371,6 @@ article.main {
     }
     &:after {
       padding-left: 0.25rem;
-    }
-    &:after {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
     }
     &:after {
       --tw-text-opacity: 1;
