@@ -162,6 +162,15 @@
     display: none !important;
   }
 
+  /* the .not-prose is a workaround for a compilation error */
+  .not-prose .readmore {
+      @apply text-sm italic float-right;
+
+      a:hover {
+          @apply underline;
+      }
+  }
+
   /* detail view only */
   article.main {
       h1 {

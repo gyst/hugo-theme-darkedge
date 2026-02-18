@@ -34,8 +34,12 @@
             </div>
             <div class="text-sm flex-grow">
 
+              <!-- can't link summary, since it may itself include a tags
+                   can't strip all HTML, because it may contain valid markup
+              -->
               {{ .Summary }}
 
+              <p><a class="readmore" href="{{ .RelPermalink }}">Read the full post →</a></p>
             </div>
           </div>
         </article>
