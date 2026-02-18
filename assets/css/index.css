@@ -1310,8 +1310,8 @@ article.main {
     margin-top: 2rem;
   }
   div.toc > div.heading {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .codeblock-meta a {
     color: rgb(255 255 255 / 0.7) !important;

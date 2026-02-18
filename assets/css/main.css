@@ -189,7 +189,7 @@
       }
 
       div.toc > div.heading {
-          @apply text-xl mt-8;
+          @apply text-2xl mt-8;
       }
 
       .codeblock-meta a {
