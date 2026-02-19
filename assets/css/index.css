@@ -1249,22 +1249,10 @@ section.showcase-first a.taxonomy,
 
 /* the .not-prose is a workaround for a compilation error */
 
-section.showcase-first li:first-child article div.flex div.not-prose .readmore {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  section.showcase-first li:first-child article div.flex div.not-prose .readmore {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
 .not-prose .readmore {
   float: right;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   font-style: italic;
   a:hover {
     text-decoration-line: underline;
