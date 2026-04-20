@@ -1266,8 +1266,24 @@ article.main {
     line-height: 3rem;
   }
   h3 {
+    border-top-width: 2px;
+  }
+  h3 {
+    --tw-border-opacity: 1;
+    border-color: rgb(203 213 225 / var(--tw-border-opacity));
+  }
+  h3 {
+    padding-top: 1.5rem;
+  }
+  h3 {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    h3 {
+      --tw-border-opacity: 1;
+      border-color: rgb(100 116 139 / var(--tw-border-opacity));
+    }
   }
   h4 {
     font-size: 1.5rem;
@@ -1335,9 +1351,6 @@ article.main {
   figure {
     img {
       margin-bottom: 0px;
-    }
-    img {
-      border-width: 1px;
     }
     img {
       padding: 0.25rem;
@@ -1589,6 +1602,14 @@ article.main aside.kit {
 
 article.main .csl-bib-body {
   padding-bottom: 1.75rem;
+}
+
+article.main .csl-entry {
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+  text-indent: -2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 section.showcase-first li:first-child article div.flex diva.taxonomy {
